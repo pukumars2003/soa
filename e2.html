@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Movie Booking</title>
+    <script>
+        function loadMovies() {
+            function loadMovies() {
+                const xhr = new XMLHttpRequest();
+                xhr.open("GET", "movies.xml", true);
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4) {
+                        if (xhr.status === 200) {
+                            const xmlDoc = xhr.responseXML;
+                            if (xmlDoc) { // Check if xmlDoc is not null
+                                const movies = xmlDoc.getElementsByTagName("movie");
+                                for (let i = 0; i < movies.length; i++) {
+                                    const title = movies[i].getElementsByTagName("title")[0].textContent;
+                                    console.log(title);
+                                }
+                            } else {
+                                console.error("Error loading movies.xml");
+                            }
+                        } else {
+                            console.error("Error:", xhr.statusText);
+                        }
+                    }
+                };
+                xhr.send();
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="loadMovies()">Load Movies</button>
+    <script>
+        window.onload = loadMovies; // Call loadMovies after page loads
+    </script>
+</body>
+
+</html>

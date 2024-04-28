@@ -1,0 +1,42 @@
+
+<movies>
+  <movie>
+    <title>Movie 1</title>
+    <director>Director 1</director>
+    <showtimes>
+      <showtime>
+        <time>7:00pm</time>
+        <date>2023-03-12</date>
+      </showtime>
+      <showtime>
+        <time>9:30pm</time>
+        <date>2023-03-12</date>
+      </showtime>
+    </showtimes>
+  </movie>
+  <movie>
+    <title>Movie 2</title>
+    <director>Director 2</director>
+    <showtimes>
+      <showtime>
+        <time>8:00pm</time>
+        <date>2023-03-13</date>
+      </showtime>
+      <showtime>
+        <time>10:30pm</time>
+        <date>2023-03-13</date>
+      </showtime>
+    </showtimes>
+  </movie>
+</movies>
+
+
+<!--<?xml version="1.0" encoding="UTF-8"?>
+<movies>
+  <movie>
+    <title>The Shawshank Redemption</title>
+  </movie>
+  <movie>
+    <title>The Godfather</title>
+  </movie>
+  </movies>-->
