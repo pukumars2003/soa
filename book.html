@@ -221,8 +221,13 @@
         You have selected <span id="count">0</span> seats for a price of ₹ <span id="total">0</span>
     </p>
     <div class="button">
-    <button class="button-select" style="color: white;background-color: #6feaf6;padding-left: 10;" >Back</button>
-    
+        <script type="text/javascript">
+            function showMessage() {
+                alert("Your Ticket has Been Booked, enjoy your show");
+            }
+        </script>
+
+    <button class="button-select" style="color: black;background-color: #6feaf6;padding-left: 10;" onclick="showMessage()">Book</button>
     </div>
     <script>
         const container = document.querySelector('.container');
