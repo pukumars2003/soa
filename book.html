@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>Movie Seat Booking</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
@@ -221,6 +222,7 @@
     <p class="text">
         You have selected <span id="count">0</span> seats for a price of ₹ <span id="total">0</span>
     </p>
+    <div ng-app="myApp" ng-controller="myCtrl">
     <div class="button">
         <script type="text/javascript">
             function showMessage() {
@@ -228,7 +230,10 @@
             }
         </script>
 
-    <button class="button-select" style="color: black;background-color: #6feaf6;padding-left: 10;" onclick="showMessage()">Book</button>
+    <button ng-click="bookTicket()" class="button-select" style="color: black;background-color: #6feaf6;padding-left: 10;" onclick="showMessage()">Book</button>
+        <p>{{ message }}</p>
+
+</div
     </div>
     <script>
         const container = document.querySelector('.container');
@@ -303,6 +308,17 @@
 
         // Initial count and total set
         updateSelectedCount();
+
+   
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.message = ''; // Initially, no message
+
+    $scope.bookTicket = function() {
+        $scope.message = 'Ticket Booked!'; // Set the message when button is clicked
+    };
+});
+
     </script>
 </body>
 
